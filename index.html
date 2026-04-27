@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="refresh" content="300">
+<title>Dealer Positioning Dashboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Fira+Code:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ═══════════════════════════════════════════════════════════════
+   VOLLAND DASHBOARD — Finity-inspired dark theme
+   Deep plum/navy + soft cards + rounded everything
+   ═══════════════════════════════════════════════════════════════ */
+
+*{margin:0;padding:0;box-sizing:border-box}
+
+:root{
+  --bg:       #1a1a2e;
+  --bg-nav:   #16162a;
+  --card:     #222244;
+  --card-h:   #2a2a50;
+  --inset:    #1c1c3a;
+  --border:   rgba(255,255,255,.06);
+  --border-h: rgba(255,255,255,.10);
+  --t1:       #f0f0f8;
+  --t2:       #b0b0cc;
+  --t3:       #7070a0;
+  --t4:       #505078;
+  --grn:      #6ee7b7;
+  --grn-bg:   rgba(110,231,183,.10);
+  --red:      #f87171;
+  --red-bg:   rgba(248,113,113,.10);
+  --pur:      #a78bfa;
+  --pur-bg:   rgba(167,139,250,.08);
+  --blu:      #818cf8;
+  --amb:      #fbbf24;
+  --cyn:      #22d3ee;
+  --r:        16px;
+  --r-sm:     12px;
+  --sans:     'Plus Jakarta Sans', -apple-system, sans-serif;
+  --code:     'Fira Code', monospace;
+}
+
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--t1);font-family:var(--sans);line-height:1.6;min-height:100vh;
+  background-image:
+    radial-gradient(ellipse at 15% 5%, rgba(129,140,248,.07) 0%, transparent 50%),
+    radial-gradient(ellipse at 85% 95%, rgba(167,139,250,.05) 0%, transparent 50%);
+}
+
+.shell{max-width:1280px;margin:0 auto;padding:1.5rem}
+
+/* ── Top bar ── */
+.topbar{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:1rem 1.5rem;margin-bottom:1.5rem;
+  background:var(--bg-nav);border:1px solid var(--border);border-radius:var(--r);
+}
+.brand{display:flex;align-items:center;gap:.75rem}
+.brand-mark{
+  width:36px;height:36px;border-radius:10px;
+  background:linear-gradient(135deg,#818cf8,#a78bfa);
+  display:flex;align-items:center;justify-content:center;
+  font-weight:800;font-size:.85rem;color:#fff;
+}
+.brand-name{font-weight:700;font-size:1.15rem;letter-spacing:-.02em;color:var(--t1)}
+.brand-sub{font-size:.65rem;color:var(--t3);font-weight:500;letter-spacing:.08em;text-transform:uppercase}
+.topbar-right{font-family:var(--code);font-size:.7rem;color:var(--t4)}
+
+/* ── Tab nav ── */
+.tabs{
+  display:flex;gap:.4rem;margin-bottom:1.75rem;
+  background:var(--bg-nav);border:1px solid var(--border);border-radius:var(--r);
+  padding:.4rem;overflow-x:auto;-webkit-overflow-scrolling:touch;
+}
+.tab{
+  font-family:var(--sans);font-size:.82rem;font-weight:600;
+  padding:.6rem 1.3rem;background:transparent;border:none;border-radius:var(--r-sm);
+  color:var(--t3);cursor:pointer;transition:all .25s;white-space:nowrap;
+  display:flex;align-items:center;gap:.5rem;
+}
+.tab:hover{color:var(--t2);background:rgba(255,255,255,.04)}
+.tab.active{color:#fff;background:var(--card);box-shadow:0 2px 8px rgba(0,0,0,.25)}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--t4);flex-shrink:0;transition:all .3s}
+.dot.on{background:var(--grn);box-shadow:0 0 8px rgba(110,231,183,.4)}
+
+/* ── Panes ── */
+.pane{display:none}
+.pane.active{display:block;animation:fadeUp .35s ease}
+@keyframes fadeUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+
+/* ── Tab info bar ── */
+.tab-info{display:flex;align-items:center;gap:1rem;margin-bottom:1.25rem;flex-wrap:wrap}
+.badge{font-family:var(--code);font-size:.7rem;color:var(--t3);background:var(--card);
+  padding:.3rem .75rem;border-radius:20px;border:1px solid var(--border)}
+.last-upd{font-family:var(--code);font-size:.7rem;color:var(--t4)}
+
+/* ── Hero price card ── */
+.hero{
+  background:var(--card);border:1px solid var(--border);border-radius:var(--r);
+  padding:1.6rem 2rem;margin-bottom:1.5rem;
+  display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1.5rem;
+}
+.hero-ticker{font-size:.75rem;font-weight:700;color:var(--t3);letter-spacing:.12em;text-transform:uppercase;margin-bottom:.25rem}
+.hero-price-row{display:flex;align-items:baseline;gap:.75rem}
+.hero-price{font-size:2.2rem;font-weight:800;letter-spacing:-.03em}
+.hero-chg{font-family:var(--code);font-size:.85rem;font-weight:600;padding:.2rem .6rem;border-radius:8px}
+.hero-stats{display:flex;gap:2.5rem;flex-wrap:wrap}
+.hero-stat{min-width:110px}
+.hs-label{font-size:.65rem;font-weight:600;color:var(--t4);text-transform:uppercase;letter-spacing:.1em;margin-bottom:.2rem}
+.hs-val{font-family:var(--code);font-size:1.2rem;font-weight:600}
+.hs-sub{font-family:var(--code);font-size:.75rem;margin-top:.1rem}
+.dom-val{font-size:.95rem}
+.stoch-bar{height:5px;background:linear-gradient(90deg,var(--red) 0%,var(--amb) 50%,var(--grn) 100%);
+  border-radius:3px;position:relative;margin-top:.35rem;width:100%;max-width:120px}
+.stoch-pip{position:absolute;top:-3px;width:3px;height:11px;background:#fff;border-radius:2px;
+  box-shadow:0 0 6px rgba(255,255,255,.5);transition:left .4s}
+
+/* ── Cards ── */
+.card{background:var(--card);border:1px solid var(--border);border-radius:var(--r);
+  padding:1.4rem;margin-bottom:1.25rem;transition:all .25s}
+.card:hover{border-color:var(--border-h);background:var(--card-h)}
+.card-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem;
+  padding-bottom:.6rem;border-bottom:1px solid var(--border)}
+.card-title{font-size:.72rem;font-weight:700;color:var(--t3);letter-spacing:.12em;text-transform:uppercase}
+
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-bottom:1.25rem}
+@media(max-width:800px){.grid-2{grid-template-columns:1fr}.hero{flex-direction:column;align-items:flex-start}.hero-stats{width:100%}}
+
+/* ── Hedging bars ── */
+.h-row{display:flex;align-items:center;gap:.75rem;padding:.45rem 0}
+.h-name{font-family:var(--code);font-size:.75rem;color:var(--t2);width:58px}
+.h-track{flex:1;height:20px;background:var(--inset);border-radius:6px;position:relative;overflow:hidden}
+.h-mid{position:absolute;left:50%;top:0;width:1px;height:100%;background:rgba(255,255,255,.08)}
+.h-fill{position:absolute;top:3px;height:14px;border-radius:4px;transition:width .5s ease}
+.h-right{left:50%}
+.h-left{right:50%}
+.h-val{font-family:var(--code);font-size:.75rem;width:80px;text-align:right;font-weight:500}
+
+/* ── Tables ── */
+.tbl{width:100%;border-collapse:collapse;font-family:var(--code);font-size:.78rem}
+.tbl th{text-align:left;font-size:.6rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--t4);padding:.5rem .6rem;border-bottom:1px solid var(--border)}
+.tbl td{padding:.55rem .6rem;border-bottom:1px solid rgba(255,255,255,.03);color:var(--t2)}
+.tbl tr:last-child td{border-bottom:none}
+.tbl tr:hover td{background:rgba(255,255,255,.02)}
+.g-name{color:var(--t1)!important;font-weight:500}
+.passed{color:var(--amb)!important;font-weight:600}
+.none{color:var(--t4)!important}
+.fb{color:var(--t4);font-size:.65rem}
+
+/* ── Paradigm ── */
+.paradigm-card{border-left:4px solid var(--pc)}
+.paradigm-name{font-family:var(--sans);font-size:1.6rem;font-weight:800;letter-spacing:-.02em}
+.paradigm-bias{font-size:.85rem;color:var(--t2);text-transform:capitalize;margin-bottom:.8rem}
+.paradigm-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(115px,1fr));gap:.6rem}
+.p-stat{background:var(--inset);border-radius:var(--r-sm);padding:.65rem}
+.p-stat-l{font-size:.6rem;font-weight:600;color:var(--t4);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.15rem}
+.p-stat-v{font-family:var(--code);font-size:.85rem;color:var(--t2);font-weight:500}
+
+/* ── Spot-vol / Catalyst ── */
+.side-cards .card{margin-bottom:.75rem}
+.sv-row{display:flex;justify-content:space-between;align-items:center;padding:.35rem 0}
+.sv-l{font-size:.7rem;font-weight:600;color:var(--t4);text-transform:uppercase;letter-spacing:.08em}
+.sv-v{font-family:var(--code);font-size:.9rem;color:var(--t2);font-weight:500}
+.sv-events{margin-top:.6rem}
+.vol-ev{background:var(--inset);padding:.5rem .7rem;border-radius:8px;margin-top:.35rem;
+  font-family:var(--code);font-size:.72rem;color:var(--t2)}
+.cat-pre{font-family:var(--code);font-size:.72rem;color:var(--t2);background:var(--inset);
+  padding:.85rem;border-radius:var(--r-sm);overflow-x:auto;white-space:pre-wrap}
+
+/* ── Analysis card ── */
+.analysis-card{border-left:4px solid var(--ac);margin-top:.5rem}
+.analysis-body p{margin-bottom:.6rem;color:var(--t2);line-height:1.8;font-size:.9rem}
+.analysis-body .a-h3{font-size:1rem;font-weight:700;color:var(--t1);margin:1.5rem 0 .55rem;letter-spacing:-.01em}
+.analysis-body .a-h4{font-size:.85rem;font-weight:700;color:var(--pur);margin:1rem 0 .35rem}
+.analysis-body .a-ul{margin:.4rem 0 .6rem 1.4rem;color:var(--t2)}
+.analysis-body .a-ul li{margin-bottom:.25rem;font-size:.88rem;line-height:1.7}
+.analysis-body strong{color:var(--t1);font-weight:600}
+
+/* ── Empty state ── */
+.empty-state{text-align:center;padding:4rem 2rem}
+.empty-icon{font-size:2.5rem;margin-bottom:1rem;opacity:.5}
+.empty-title{font-size:1.1rem;font-weight:600;color:var(--t2);margin-bottom:.4rem}
+.empty-sub{font-size:.85rem;color:var(--t4)}
+.empty{color:var(--t4);font-style:italic;font-size:.82rem}
+
+/* ── Today's Read Log ── */
+.log-card{margin-top:1.25rem}
+.log-count{font-family:var(--code);font-size:.68rem;color:var(--t4)}
+.log-entry{border-bottom:1px solid var(--border);padding:.5rem 0}
+.log-entry:last-child{border-bottom:none}
+.log-summary{display:flex;align-items:center;gap:.75rem;cursor:pointer;
+  list-style:none;padding:.4rem .2rem;border-radius:8px;transition:background .2s}
+.log-summary:hover{background:rgba(255,255,255,.03)}
+.log-summary::-webkit-details-marker{display:none}
+.log-time{font-family:var(--code);font-size:.82rem;font-weight:600;color:var(--amb);min-width:60px}
+.log-chevron{font-size:.65rem;color:var(--t4);transition:transform .2s}
+details[open] .log-chevron{transform:rotate(90deg)}
+.log-body{padding:.75rem .5rem 0;border-top:1px solid var(--border);margin-top:.4rem}
+.log-body p{margin-bottom:.5rem;color:var(--t2);line-height:1.7;font-size:.87rem}
+.log-body .a-h3{font-size:.95rem;font-weight:700;color:var(--t1);margin:1.2rem 0 .4rem}
+.log-body .a-h4{font-size:.82rem;font-weight:700;color:var(--pur);margin:.8rem 0 .3rem}
+.log-body .a-ul{margin:.35rem 0 .5rem 1.3rem;color:var(--t2)}
+.log-body .a-ul li{margin-bottom:.2rem;font-size:.85rem;line-height:1.65}
+.log-body strong{color:var(--t1);font-weight:600}
+
+/* ── Footer ── */
+.footer{margin-top:2.5rem;padding:1.25rem;
+  background:var(--bg-nav);border:1px solid var(--border);border-radius:var(--r);
+  font-size:.7rem;color:var(--t4);text-align:center;line-height:1.9}
+</style>
+</head>
+<body>
+<div class="shell">
+
+<div class="topbar">
+    <div class="brand">
+        <div class="brand-mark">DP</div>
+        <div><div class="brand-name">Dealer Positioning</div><div class="brand-sub">Options Market Structure</div></div>
+    </div>
+    <div class="topbar-right">Apr 26, 2026 • 09:12 PM ET</div>
+</div>
+
+<nav class="tabs"><button class="tab" data-t="0dte" style="--tc:#fbbf24"><span class="dot"></span>0DTE</button><button class="tab" data-t="weekly" style="--tc:#818cf8"><span class="dot"></span>Weekly</button><button class="tab" data-t="swing" style="--tc:#a78bfa"><span class="dot"></span>Swing</button><button class="tab" data-t="longterm" style="--tc:#22d3ee"><span class="dot"></span>Long Term</button></nav>
+
+<div class="pane" id="p-0dte">
+            <div class="tab-info"><span class="badge">Hourly during market hours</span><span class="last-upd">Awaiting first run</span></div>
+            <div class="empty-state"><div class="empty-icon">⚡</div>
+            <p class="empty-title">Awaiting data</p><p class="empty-sub">This tab updates hourly during market hours</p></div></div><div class="pane" id="p-weekly">
+            <div class="tab-info"><span class="badge">3× daily</span><span class="last-upd">Awaiting first run</span></div>
+            <div class="empty-state"><div class="empty-icon">📊</div>
+            <p class="empty-title">Awaiting data</p><p class="empty-sub">This tab updates 3× daily</p></div></div><div class="pane" id="p-swing">
+            <div class="tab-info"><span class="badge">Daily pre-market</span><span class="last-upd">Awaiting first run</span></div>
+            <div class="empty-state"><div class="empty-icon">🔄</div>
+            <p class="empty-title">Awaiting data</p><p class="empty-sub">This tab updates daily pre-market</p></div></div><div class="pane" id="p-longterm">
+            <div class="tab-info"><span class="badge">Weekly</span><span class="last-upd">Awaiting first run</span></div>
+            <div class="empty-state"><div class="empty-icon">🔭</div>
+            <p class="empty-title">Awaiting data</p><p class="empty-sub">This tab updates weekly</p></div></div>
+
+<div class="footer">
+    Not financial advice • Options dealer positioning analysis<br>
+    Dealer hedging ≈ 35-40% of equity movement • Other market participants not captured
+</div>
+
+</div>
+<script>
+(function(){
+const bs=document.querySelectorAll('.tab'),ps=document.querySelectorAll('.pane');
+function go(id){
+  bs.forEach(b=>{b.classList.toggle('active',b.dataset.t===id)});
+  ps.forEach(p=>p.classList.toggle('active',p.id==='p-'+id));
+  try{localStorage.setItem('vt',id)}catch{}
+}
+bs.forEach(b=>b.addEventListener('click',()=>go(b.dataset.t)));
+let s;try{s=localStorage.getItem('vt')}catch{}
+if(s&&document.getElementById('p-'+s))go(s);
+else{const f=document.querySelector('.dot.on');if(f)go(f.closest('.tab').dataset.t);else go('0dte')}
+})();
+</script>
+</body>
+</html>
