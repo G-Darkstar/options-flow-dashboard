@@ -220,7 +220,7 @@ details[open] .log-chevron{transform:rotate(90deg)}
         <div class="brand-mark">DP</div>
         <div><div class="brand-name">Dealer Positioning</div><div class="brand-sub">Options Market Structure</div></div>
     </div>
-    <div class="topbar-right">Apr 30, 2026 • 09:32 AM ET</div>
+    <div class="topbar-right">Apr 30, 2026 • 09:35 AM ET</div>
 </div>
 
 <nav class="tabs"><button class="tab" data-t="0dte" style="--tc:#fbbf24"><span class="dot on"></span>0DTE</button><button class="tab" data-t="weekly" style="--tc:#818cf8"><span class="dot on"></span>Weekly</button><button class="tab" data-t="swing" style="--tc:#a78bfa"><span class="dot on"></span>Swing</button><button class="tab" data-t="longterm" style="--tc:#22d3ee"><span class="dot on"></span>Long Term</button></nav>
@@ -289,105 +289,104 @@ details[open] .log-chevron{transform:rotate(90deg)}
 
         <div class="card analysis-card" style="--ac:#fbbf24">
             <div class="card-head"><span class="card-title">⚡ Analysis</span></div>
-            <div class="analysis-body"><p># 0DTE SPX Analysis — April 30, 2026 | 9:30 AM ET</p>
-<h3 class="a-h3">Session Update — Open Print</h3>
+            <div class="analysis-body"><p># 0DTE SPX Analysis — April 30, 2026 | 9:34 AM ET</p>
+<h3 class="a-h3">Session Update — 4 Minutes After Open</h3>
 <p>---</p>
 <h3 class="a-h3">1. Market Context</h3>
-<p>SPX prints <strong>7171.56 at the open</strong> — exactly where it was pre-market. No gap fill, no immediate test of 7200. VIX is now <strong>17.59, declining -0.442</strong> (accelerating vs. -0.296 pre-market). Vanna stochastic holds at <strong>100.0</strong>. 6.5 hours to close. Entry window is <strong>60 minutes out</strong> — nothing to do except watch.</p>
+<p>SPX has pulled back <strong>11 points in 4 minutes</strong> — from 7171.56 at the open to <strong>7160.48</strong>. VIX data returns `nan` (API data lag at open — not meaningful; last confirmed read was 17.59 declining at -0.442). Vanna stochastic holds at <strong>100.0</strong>. The early sell-off is not surprising: spot opened directly inside a negative gamma corridor and immediately felt amplification on the way down. Upper LIS distance has now extended from 28 pts to <strong>40 pts</strong> — giving the iron condor's call leg more room.</p>
 <p>---</p>
-<h3 class="a-h3">2. Primary Signal — What Changed Since 8:45 AM</h3>
-<p>The paradigm is unchanged (BofA), but the charm structure has shifted meaningfully since the pre-market read:</p>
-<p>| Metric | 8:45 AM | 9:30 AM | Direction |</p>
+<h3 class="a-h3">2. Primary Signal — What Changed Since 9:30 AM</h3>
+<p>| Metric | 9:30 AM | 9:34 AM | Direction |</p>
 <p>|---|---|---|---|</p>
-<p>| Net 0DTE Charm | -$2.0M | <strong>+$14.3M</strong> | Flipped bearish |</p>
-<p>| Above-spot Charm | +$5.25M | <strong>+$16.47M</strong> | +214% — ceiling 3x stronger |</p>
-<p>| Below-spot Charm | -$7.26M | <strong>-$2.17M</strong> | Weakened 70% — floor thinner |</p>
-<p>| Charm at 7200 | +$12.2M | <strong>+$14.19M</strong> | Ceiling reinforced |</p>
-<p>| VIX decline rate | -0.296 | <strong>-0.442</strong> | Accelerating |</p>
-<p><strong>Interpretation</strong>: The opening bell triggered a large wave of new 0DTE call buying at 7200 and 7245. Dealers are now sitting on significantly more positive charm above spot — the mechanical selling pressure on rallies has tripled since pre-market. Simultaneously, the floor below has thinned considerably. Net charm of <strong>+$14.3M</strong> means dealers are now net sellers as time passes — a mild intraday bearish lean from charm alone.</p>
-<p>Critically, VIX declining faster makes the vanna stochastic at 100 more load-bearing today. Structural dealer buying from vanna hedging is the offsetting bullish force against charm's bearish lean.</p>
+<p>| SPX | 7171.56 | <strong>7160.48</strong> | -11 pts |</p>
+<p>| Net 0DTE Charm | +$14.3M | <strong>+$16.2M</strong> | More bearish |</p>
+<p>| Above-spot Charm | +$16.47M | <strong>+$21.13M</strong> | +28% — ceiling even stronger |</p>
+<p>| Below-spot Charm | -$2.17M | <strong>-$4.96M</strong> | +128% — floor rebuilding |</p>
+<p>| Gamma at 7200 | -$26.18M | <strong>-$22.07M</strong> | Amplifier still enormous, slightly smaller |</p>
+<p>| Upper LIS distance | +28 pts | <strong>+40 pts</strong> | More cushion for condor |</p>
+<p>| Gamma pin | 7175 | <strong>7140</strong> | Gravity center shifted lower |</p>
+<p><strong>What drove these changes</strong>: Additional 0DTE call positioning has accumulated at 7200 and 7245 since the open, further reinforcing the ceiling. The below-spot charm also rebuilt slightly, suggesting some put buying at lower strikes. Net result: the BofA containment structure is stronger than at the open on *both* sides.</p>
 <p>---</p>
 <h3 class="a-h3">3. Key Levels</h3>
-<p>| Level | Distance | Role | Note |</p>
+<p>| Level | Distance | Role | Value |</p>
 <p>|---|---|---|---|</p>
-<p>| <strong>7200</strong> | <strong>+28 pts</strong> | <strong>Upper LIS</strong> | Charm +$14.19M + Gamma -$26.18M — ceiling reinforced since open |</p>
-<p>| 7205 | +33 pts | Gamma pin + Charm flip | Gamma +$11.46M + Charm -$7.27M — if 7200 breaks, this is the magnet AND the new ceiling |</p>
-<p>| 7245 | +73 pts | Far charm resistance | +$10.98M charm — second ceiling if 7205 breaks |</p>
-<p>| <strong>7175</strong> | <strong>+3 pts</strong> | New gamma micro-support | +$6.93M gamma — positive gamma island just above spot, stabilizing open |</p>
-<p>| <strong>7171.56</strong> | <strong>Spot</strong> | | Sandwiched: +gamma at 7175, -gamma at 7170 |</p>
-<p>| 7170 | -2 pts | Negative gamma amplifier | -$13.51M — just below spot, moves down feel amplified |</p>
-<p>| 7150 | -22 pts | Secondary negative gamma | -$9.05M — amplifier continues |</p>
-<p>| 7140 | -32 pts | Gamma support | +$8.76M — first real cushion below |</p>
-<p>| 7120 | -52 pts | Charm + gamma support | +$6.15M charm — lower LIS zone |</p>
-<p>| <strong>7050</strong> | <strong>-122 pts</strong> | <strong>Lower LIS</strong> | Charm -$5.75M — mechanical floor |</p>
-<p><strong>New observation</strong>: Spot is now sandwiched in a 5-point gamma corridor — positive gamma 3 pts above at 7175, negative gamma 2 pts below at 7170. This micro-pinning force should suppress opening range volatility near current price. A break below 7170 enters negative gamma territory that amplifies moves to 7150, then 7140.</p>
+<p>| <strong>7200</strong> | <strong>+40 pts</strong> | <strong>Upper LIS</strong> | Charm +$16.41M, Gamma -$22.07M — ceiling strongest of the day |</p>
+<p>| 7205 | +45 pts | Post-LIS magnet + new ceiling | Gamma +$8.95M, Charm -$7.49M — dealers buy here if 7200 breaks |</p>
+<p>| 7245 | +85 pts | Secondary charm ceiling | +$9.92M charm |</p>
+<p>| 7170 | <strong>+10 pts</strong> | Negative gamma overhead | <strong>-$13.42M</strong> — amplifier sitting just above spot; upward recoveries feel heavy |</p>
+<p>| <strong>7160.48</strong> | <strong>Spot</strong> | | Caught between two negative gamma zones |</p>
+<p>| 7150 | <strong>-10 pts</strong> | Negative gamma below | <strong>-$9.78M</strong> — amplifier 10 pts below; a drift to 7150 accelerates |</p>
+<p>| <strong>7140</strong> | <strong>-20 pts</strong> | <strong>Gamma pin / primary support</strong> | <strong>+$9.21M</strong> — gravity center of the session; strong magnet |</p>
+<p>| 7120 | -40 pts | Secondary gamma support | +$7.77M |</p>
+<p>| 7040/7050 | -120/110 pts | <strong>Lower LIS zone</strong> | Charm -$8.41M at 7050, +$6.05M at 7040 — mechanical floor |</p>
+<p><strong>Critical geometry</strong>: Spot is pinched in a <strong>20-point negative gamma sandwich</strong> — negative gamma 10 pts above at 7170 (-$13.4M) and 10 pts below at 7150 (-$9.8M). Moves in either direction will feel amplified until price reaches the positive gamma anchors at 7140 (below) or 7200's charm ceiling (above). The 7140 gamma pin (+$9.21M) is now the dominant gravity center — it will attract price when the BofA range is undisturbed.</p>
 <p>---</p>
-<h3 class="a-h3">4. Paradigm — BofA, Reinforced</h3>
-<p>The charm flip since pre-market actually <strong>strengthens</strong> the BofA case:</p>
+<h3 class="a-h3">4. Paradigm — BofA, Structurally Stronger</h3>
+<p>The BofA structure is more reinforced at 9:34 than it was at the open:</p>
 <ul class='a-ul'>
-<li>**Above spot**: +$16.47M charm → dealers mechanically selling every rally → ceiling is stronger</li>
-<li>**Below spot**: -$2.17M charm → small mechanical buy below → floor is thinner but still present at 7140/7120 via gamma</li>
+<li>**Ceiling**: Above-spot charm grew from +$16.47M to **+$21.13M** (+28%). 7200 is now carrying +$16.41M charm alone — the single most powerful strike on the board by a wide margin.</li>
+<li>**Floor**: Below-spot charm deepened to -$4.96M from -$2.17M. Still thin versus the ceiling, but rebuilding. Gamma at 7140 (+$9.21M) and 7120 (+$7.77M) provide the real lower containment.</li>
+<li>**Net charm +$16.2M**: Dealers are net sellers as time passes today — mild structural bearish lean from charm alone. This is consistent with SPX gravitating toward 7140 (mid-range below open) rather than testing 7200.</li>
 </ul>
-<p>The 7200 strike is now <strong>more fortified</strong> than pre-market. The -$26.18M gamma amplifier means any clean 5-min close above 7200 becomes a violent breakout toward 7205. But the ceiling itself — +$14.19M charm — is the strongest it's been today.</p>
-<p><strong>The 7205 dynamic is critical</strong>: If 7200 breaks, 7205 has <strong>negative charm (-$7.27M)</strong> meaning dealers must buy there, and <strong>positive gamma (+$11.46M)</strong> — it becomes both magnet and new ceiling simultaneously. Do not short into the gap between 7200 and 7205 if 7200 breaks on volume.</p>
+<p>The early 11-point sell-off is BofA-consistent behavior: the negative gamma at 7170 amplified the opening-minute dip, sending price away from the ceiling toward the internal range. The 7140 gamma pin is now likely to act as the session's mean-reversion target.</p>
 <p>---</p>
 <h3 class="a-h3">5. Risk Factors</h3>
-<p><strong>1. Below-spot charm thinned 70%.</strong> The floor is now primarily gamma-supported at 7140/7120, not charm-supported. A sharp sell-off through 7170 negative gamma will feel more violent than expected before finding support.</p>
-<p><strong>2. VIX decline accelerating.</strong> At -0.442, if this continues, the vanna stochastic stays pegged at 100 and structural dealer buying may overwhelm the charm ceiling. This is the scenario where 7200 breaks.</p>
-<p><strong>3. Micro-gamma corridor at spot.</strong> The 5-point gap between +gamma at 7175 and -gamma at 7170 creates an unstable zone. If price drifts below 7170 in the first 30 minutes, negative gamma amplification kicks in immediately — the move to 7150 can happen fast.</p>
-<p><strong>4. 60 minutes to entry window.</strong> BofA win rate applies to trades entered at 10:30 AM with defined paradigm. Early entries carry higher risk from gamma noise.</p>
+<p><strong>1. Negative gamma sandwich is the primary intraday risk.</strong> Spot is between -$13.4M at 7170 (above) and -$9.8M at 7150 (below). If a catalyst pushes price through 7150, the next 10 points to 7140 feel violent — but 7140 (+$9.21M) should arrest the move. Do not mistake the amplified move as a paradigm break.</p>
+<p><strong>2. VIX data lag.</strong> NaN VIX reading at 9:34 is a standard open data issue — treat the last confirmed reading (17.59, declining) as still operative until refresh. The vanna stochastic at 100 remains the more reliable signal.</p>
+<p><strong>3. Ceiling is now 40 pts away.</strong> This is positive for the iron condor's upper leg. However, the put side at 7050 is 110 pts away — the condor is asymmetrically positioned. Adjust lower short strike if desired for better credit balance (e.g., move puts to 7100).</p>
+<p><strong>4. 56 minutes to entry window.</strong> Opening range noise continues until 10:30 AM. The negative gamma amplifiers on both sides will make the next hour feel choppy. No entries.</p>
 <p>---</p>
 <h3 class="a-h3">6. Trade Ideas</h3>
-<h4 class="a-h4">BofA Iron Condor | **WAIT for 10:30 AM** | HIGH conviction (if SPX 7155–7195)</h4>
-<p>No change to the primary trade structure. The upper short strike is now even more fortified:</p>
+<h4 class="a-h4">BofA Iron Condor | **WAIT for 10:30 AM** | HIGH conviction (if SPX 7140–7190)</h4>
+<p>The upper leg is now even higher conviction — 7200 ceiling has +$16.41M charm and -$22.07M gamma, the strongest setup of the day. Consider adjusting the put leg upward given the 110 pt distance:</p>
 <ul class='a-ul'>
-<li>Sell 7200C / Buy 7225C</li>
-<li>Sell 7050P / Buy 7025P</li>
-<li>**Conviction degrades to MEDIUM if SPX has already tested and stalled at 7200 before 10:30** — the setup has already partially expressed</li>
+<li>Sell 7200C / Buy 7225C (upper wing — strongest setup on the board)</li>
+<li>Sell 7100P / Buy 7075P (consider moving from 7050P to 7100P for better credit; 7140 gamma support limits downside risk to this range)</li>
+<li>**Primary conviction upgrade**: the ceiling is more fortified than at any prior read today. The floor asymmetry (40 pts vs. 110 pts) is the only structural concern.</li>
 </ul>
-<p>The 9:30 AM data upgrades the <strong>upper side conviction</strong> (charm tripled) while slightly <strong>downgrading the lower side</strong> (floor thinned). The 7200 call is the highest-conviction leg.</p>
 <p>---</p>
 <h4 class="a-h4">Fade Rally to 7200 | WATCH | MEDIUM-HIGH conviction</h4>
 <ul class='a-ul'>
-<li>**Trigger**: SPX prints 7196–7202 and stalls with no 5-min close above 7205</li>
-<li>**Structure**: Buy 7185/7165P put spread, or short 7200C outright</li>
-<li>**Stop**: Clean 5-min close above 7205 (negative gamma breakout — stand aside completely)</li>
-<li>**Target**: Return to 7155–7165</li>
-<li>**Why**: Charm ceiling at 7200 is now +$14.19M (strongest single strike); gamma amplifier -$26.18M means any stall creates violent rejection</li>
+<li>**Trigger**: SPX recovers from 7160 and prints 7196–7202, stalls with no 5-min close above 7205</li>
+<li>**Structure**: Buy 7185/7165P put spread, or short 7200C</li>
+<li>**Stop**: Clean 5-min close above 7205</li>
+<li>**Target**: Return to 7150–7160 (mid-range, toward 7140 gamma pin)</li>
+<li>**Why**: +$16.41M charm ceiling + -$22.07M gamma amplifier — the strongest mechanical rejection level on the board. A rally to 7200 from 7160 is 40 pts of positive gamma and charm resistance to overcome before touch.</li>
 </ul>
 <p>---</p>
-<h4 class="a-h4">If 7200 Breaks Clean — Stand Aside</h4>
-<p>Unchanged from pre-market. The -$26.18M gamma at 7200 accelerates immediately. Wait for 7205 consolidation (+$11.46M gamma pin, -$7.27M charm floor creates the new ceiling). Re-engage short at 7205 only on clear stall.</p>
+<h4 class="a-h4">7200 Breakout — Stand Aside</h4>
+<p>Unchanged. If 7200 breaks on volume with a clean 5-min close above 7205, do not short into the -$22.07M gamma amplifier. Wait for 7205 gamma pin (+$8.95M) to establish the new ceiling. Re-engage short at 7205 only on confirmed stall.</p>
 <p>---</p>
-<h4 class="a-h4">Directional Lean | PUT SPREAD | WATCH | LOW conviction</h4>
-<p>BofA paradigm is range-bound — directional trades are low priority. Net charm is bearish (+$14.3M), VIX decline is bullish via vanna. These forces largely offset directionally. Only elevate this if SPX rallies to 7200 and fails convincingly:</p>
+<h4 class="a-h4">Directional Put — Conditional | WATCH | LOW conviction</h4>
+<p>Directional trades remain low priority in BofA. The early sell-off demonstrates the negative gamma amplification, but the 7140 gamma pin (+$9.21M) is the likely floor. A put spread only becomes relevant if SPX stalls at 7170 resistance (overhead negative gamma) and rolls over again:</p>
 <ul class='a-ul'>
+<li>**Trigger**: SPX recovers toward 7168–7172, stalls at the -$13.42M gamma overhead, confirms 5-min close below 7162</li>
 <li>**Structure**: Buy 7150P / Sell 7120P</li>
-<li>**Trigger**: SPX touches 7196+ and confirms rejection with 5-min close below 7190</li>
-<li>**Stop**: SPX closes 5-min above 7200</li>
-<li>**Target**: 7140–7150 (gamma support)</li>
-<li>**Conviction stays LOW** unless rejection at 7200 is confirmed</li>
+<li>**Stop**: 5-min close above 7172</li>
+<li>**Target**: 7140 (gamma pin magnet)</li>
+<li>**Why**: Negative gamma at 7170 is now the near-term overhead resistance; a failed recovery there with net charm +$16.2M bearishly positioned supports a drift toward 7140. Conviction stays LOW — BofA paradigm means range-bound, not trending.</li>
 </ul>
 <p>---</p>
 <h3 class="a-h3">7. Session Timeline</h3>
 <p>| Time (ET) | Status | Focus |</p>
 <p>|---|---|---|</p>
 <p>| 8:45 AM | Complete | Pre-market brief — BofA confirmed |</p>
-<p>| 9:30 AM | <strong>Now</strong> | Open print — 7171.56, paradigm unchanged, charm ceiling 3x stronger |</p>
-<p>| 10:00–10:15 AM | Pending | Watch for 7200 test or 7170 break |</p>
-<p>| <strong>10:30 AM</strong> | <strong>Entry window</strong> | <strong>Iron condor if SPX rangebound 7155–7195</strong> |</p>
-<p>| 2:00–2:15 PM | Pending | Dealer o'clock — charm/gamma rebalancing intensifies |</p>
-<p>| 2:15–2:30 PM | Pending | Charm approaches exhaustion — reassess thesis |</p>
-<p>| 3:30–4:00 PM | — | No new positions — let theta expire |</p>
+<p>| 9:30 AM | Complete | Open 7171.56 — charm ceiling tripled |</p>
+<p>| <strong>9:34 AM</strong> | <strong>Now</strong> | Open -11 pts to 7160. Negative gamma corridor active. 7140 gravity center. |</p>
+<p>| 10:00–10:15 AM | Pending | Watch for 7140 test or recovery to 7170 overhead resistance |</p>
+<p>| <strong>10:30 AM</strong> | <strong>Entry window</strong> | <strong>Iron condor if SPX rangebound 7135–7190</strong> |</p>
+<p>| 2:00–2:15 PM | Pending | Dealer o'clock |</p>
+<p>| 2:15–2:30 PM | Pending | Charm exhaustion — reassess directional thesis |</p>
+<p>| 3:30–4:00 PM | — | No new positions |</p>
 <p>---</p>
 <h3 class="a-h3">Bottom Line</h3>
-<p>BofA paradigm confirmed at the open. The most important development since 8:45 AM: the <strong>7200 charm ceiling tripled in magnitude</strong> to +$14.19M as new 0DTE calls were written at the open. The floor below thinned simultaneously. Spot is in a 5-point gamma corridor (+gamma at 7175, -gamma at 7170) that should suppress the opening range near current price. The primary trade — BofA iron condor — holds, now with even stronger conviction on the upper leg. No entries before 10:30 AM. VIX declining faster is the primary risk that could push through 7200; if that happens, stand aside until 7205 establishes as the new ceiling.</p>
+<p>BofA paradigm confirmed and strengthened. SPX's 11-point drop in the first 4 minutes is mechanical behavior — negative gamma at 7170 amplified the dip, and price is now drifting toward the 7140 gamma pin (+$9.21M) that has become the session's gravity center. The 7200 ceiling is now the most fortified it has been all day: +$16.41M charm, -$22.07M gamma amplifier. Upper LIS distance extended to 40 pts — favorable for the iron condor call leg. Entry window in 56 minutes. Primary risk: getting shaken out by the negative gamma amplifiers in the 7150–7170 zone before 10:30 AM. Let the opening range settle.</p>
 <p>*Based on dealer positioning data. ~60–65% of market movement from fundamental, CTA, and passive flows not captured here. Not financial advice.*</p>
 <p>---</p>
 <p>&lt;!-- TRADES_JSON</p>
 <p>{</p>
-<p>"timestamp": "2026-04-30T09:30:11Z",</p>
-<p>"spx": 7171.56,</p>
+<p>"timestamp": "2026-04-30T09:34:00Z",</p>
+<p>"spx": 7160.48,</p>
 <p>"paradigm": "BofA",</p>
 <p>"trades": [</p>
 <p>{</p>
@@ -397,11 +396,11 @@ details[open] .log-chevron{transform:rotate(90deg)}
 <p>"action": "watch",</p>
 <p>"conviction": "HIGH",</p>
 <p>"is_new": false,</p>
-<p>"trigger": "SPX rangebound 7155–7195 at 10:30 AM ET",</p>
-<p>"structure": "Sell 7200C / Buy 7225C + Sell 7050P / Buy 7025P",</p>
-<p>"why": "7200 charm ceiling tripled to +$14.19M since pre-market, combined with -$26.18M gamma amplifier — strongest fade setup on the board; lower LIS at 7050 holds -$5.75M charm floor",</p>
-<p>"stop": "Clean 5-min close above 7205 (upper wing) or below 7040 (lower wing)",</p>
-<p>"target": "Full premium capture; expect SPX to close between 7100–7195"</p>
+<p>"trigger": "SPX rangebound 7135–7190 at 10:30 AM ET",</p>
+<p>"structure": "Sell 7200C / Buy 7225C + Sell 7100P / Buy 7075P (put leg adjusted from 7050 to 7100 given 7140 gamma support)",</p>
+<p>"why": "7200 ceiling grew to +$16.41M charm + -$22.07M gamma — most fortified level of the day; 7140 gamma pin (+$9.21M) anchors the lower range, making 7100P a viable short strike 40 pts below pin",</p>
+<p>"stop": "Clean 5-min close above 7205 (call wing) or below 7130 (put wing)",</p>
+<p>"target": "Full premium capture; SPX expected to close between 7130–7195"</p>
 <p>},</p>
 <p>{</p>
 <p>"id": "fade_7200",</p>
@@ -410,11 +409,11 @@ details[open] .log-chevron{transform:rotate(90deg)}
 <p>"action": "watch",</p>
 <p>"conviction": "MEDIUM-HIGH",</p>
 <p>"is_new": false,</p>
-<p>"trigger": "SPX prints 7196–7202 and stalls with no 5-min close above 7205",</p>
+<p>"trigger": "SPX recovers from 7160 and prints 7196–7202 with no 5-min close above 7205",</p>
 <p>"structure": "Buy 7185/7165P put spread, or short 7200C outright",</p>
-<p>"why": "Charm at 7200 upgraded to +$14.19M (tripled since pre-market); -$26.18M negative gamma amplifier at 7200 means stall at this level creates violent rejection",</p>
+<p>"why": "+$16.41M charm ceiling at 7200 is the strongest single strike on the board; -$22.07M negative gamma amplifier means any stall generates violent rejection",</p>
 <p>"stop": "Clean 5-min close above 7205",</p>
-<p>"target": "7155–7165"</p>
+<p>"target": "7150–7160, toward 7140 gamma pin"</p>
 <p>},</p>
 <p>{</p>
 <p>"id": "breakout_standaside",</p>
@@ -424,23 +423,23 @@ details[open] .log-chevron{transform:rotate(90deg)}
 <p>"conviction": "HIGH",</p>
 <p>"is_new": false,</p>
 <p>"trigger": "Clean 5-min close above 7205",</p>
-<p>"structure": "No position; wait for 7205 to become new ceiling (+$11.46M gamma, -$7.27M charm)",</p>
-<p>"why": "-$26.18M negative gamma at 7200 accelerates moves immediately on breakout; shorting into a negative gamma breakout is the primary risk in BofA paradigm",</p>
-<p>"stop": "N/A — this is a risk management rule, not a trade",</p>
+<p>"structure": "No position; wait for 7205 to become new ceiling (+$8.95M gamma, -$7.49M charm floor)",</p>
+<p>"why": "-$22.07M negative gamma at 7200 accelerates moves immediately on breakout; shorting into a negative gamma breakout is the highest-probability losing trade in BofA paradigm",</p>
+<p>"stop": "N/A — risk management rule, not a trade",</p>
 <p>"target": "Re-engage short at 7205 only on confirmed stall with 5-min close below 7200"</p>
 <p>},</p>
 <p>{</p>
 <p>"id": "directional_put_spread",</p>
-<p>"name": "Conditional Put Spread — 7200 Rejection",</p>
+<p>"name": "Conditional Put Spread — 7170 Overhead Rejection",</p>
 <p>"type": "long_put",</p>
 <p>"action": "watch",</p>
 <p>"conviction": "LOW",</p>
-<p>"is_new": true,</p>
-<p>"trigger": "SPX touches 7196+ then confirms rejection with 5-min close below 7190",</p>
+<p>"is_new": false,</p>
+<p>"trigger": "SPX recovers toward 7168–7172, stalls at -$13.42M negative gamma overhead, confirms 5-min close below 7162",</p>
 <p>"structure": "Buy 7150P / Sell 7120P",</p>
-<p>"why": "BofA is range-bound — directional lean is low priority; net charm +$14.3M is mildly bearish but vanna at 100 + VIX decline creates offsetting bullish force; only activate on confirmed 7200 rejection",</p>
-<p>"stop": "SPX 5-min close above 7200",</p>
-<p>"target": "7140–7150 (gamma support at +$8.76M)"</p>
+<p>"why": "Negative gamma at 7170 (-$13.42M) is the near-term overhead resistance; net charm +$16.2M leans bearish; 7140 gamma pin is the natural target — directional trade only relevant on a failed recovery into overhead resistance",</p>
+<p>"stop": "5-min close above 7172",</p>
+<p>"target": "7140 (gamma pin +$9.21M)"</p>
 <p>}</p>
 <p>]</p>
 <p>}</p>
@@ -450,9 +449,169 @@ details[open] .log-chevron{transform:rotate(90deg)}
         <div class="card log-card">
         <div class="card-head">
             <span class="card-title">⚡ Today's Reads</span>
-            <span class="log-count">3 updates · 2026-04-30</span>
+            <span class="log-count">4 updates · 2026-04-30</span>
         </div>
         <details class="log-entry" open>
+            <summary class="log-summary">
+                <span class="log-time">09:35 ET</span>
+                <span class="log-chevron">▸</span>
+            </summary>
+            <div class="log-body"><p># 0DTE SPX Analysis — April 30, 2026 | 9:34 AM ET</p>
+<h3 class="a-h3">Session Update — 4 Minutes After Open</h3>
+<p>---</p>
+<h3 class="a-h3">1. Market Context</h3>
+<p>SPX has pulled back <strong>11 points in 4 minutes</strong> — from 7171.56 at the open to <strong>7160.48</strong>. VIX data returns `nan` (API data lag at open — not meaningful; last confirmed read was 17.59 declining at -0.442). Vanna stochastic holds at <strong>100.0</strong>. The early sell-off is not surprising: spot opened directly inside a negative gamma corridor and immediately felt amplification on the way down. Upper LIS distance has now extended from 28 pts to <strong>40 pts</strong> — giving the iron condor's call leg more room.</p>
+<p>---</p>
+<h3 class="a-h3">2. Primary Signal — What Changed Since 9:30 AM</h3>
+<p>| Metric | 9:30 AM | 9:34 AM | Direction |</p>
+<p>|---|---|---|---|</p>
+<p>| SPX | 7171.56 | <strong>7160.48</strong> | -11 pts |</p>
+<p>| Net 0DTE Charm | +$14.3M | <strong>+$16.2M</strong> | More bearish |</p>
+<p>| Above-spot Charm | +$16.47M | <strong>+$21.13M</strong> | +28% — ceiling even stronger |</p>
+<p>| Below-spot Charm | -$2.17M | <strong>-$4.96M</strong> | +128% — floor rebuilding |</p>
+<p>| Gamma at 7200 | -$26.18M | <strong>-$22.07M</strong> | Amplifier still enormous, slightly smaller |</p>
+<p>| Upper LIS distance | +28 pts | <strong>+40 pts</strong> | More cushion for condor |</p>
+<p>| Gamma pin | 7175 | <strong>7140</strong> | Gravity center shifted lower |</p>
+<p><strong>What drove these changes</strong>: Additional 0DTE call positioning has accumulated at 7200 and 7245 since the open, further reinforcing the ceiling. The below-spot charm also rebuilt slightly, suggesting some put buying at lower strikes. Net result: the BofA containment structure is stronger than at the open on *both* sides.</p>
+<p>---</p>
+<h3 class="a-h3">3. Key Levels</h3>
+<p>| Level | Distance | Role | Value |</p>
+<p>|---|---|---|---|</p>
+<p>| <strong>7200</strong> | <strong>+40 pts</strong> | <strong>Upper LIS</strong> | Charm +$16.41M, Gamma -$22.07M — ceiling strongest of the day |</p>
+<p>| 7205 | +45 pts | Post-LIS magnet + new ceiling | Gamma +$8.95M, Charm -$7.49M — dealers buy here if 7200 breaks |</p>
+<p>| 7245 | +85 pts | Secondary charm ceiling | +$9.92M charm |</p>
+<p>| 7170 | <strong>+10 pts</strong> | Negative gamma overhead | <strong>-$13.42M</strong> — amplifier sitting just above spot; upward recoveries feel heavy |</p>
+<p>| <strong>7160.48</strong> | <strong>Spot</strong> | | Caught between two negative gamma zones |</p>
+<p>| 7150 | <strong>-10 pts</strong> | Negative gamma below | <strong>-$9.78M</strong> — amplifier 10 pts below; a drift to 7150 accelerates |</p>
+<p>| <strong>7140</strong> | <strong>-20 pts</strong> | <strong>Gamma pin / primary support</strong> | <strong>+$9.21M</strong> — gravity center of the session; strong magnet |</p>
+<p>| 7120 | -40 pts | Secondary gamma support | +$7.77M |</p>
+<p>| 7040/7050 | -120/110 pts | <strong>Lower LIS zone</strong> | Charm -$8.41M at 7050, +$6.05M at 7040 — mechanical floor |</p>
+<p><strong>Critical geometry</strong>: Spot is pinched in a <strong>20-point negative gamma sandwich</strong> — negative gamma 10 pts above at 7170 (-$13.4M) and 10 pts below at 7150 (-$9.8M). Moves in either direction will feel amplified until price reaches the positive gamma anchors at 7140 (below) or 7200's charm ceiling (above). The 7140 gamma pin (+$9.21M) is now the dominant gravity center — it will attract price when the BofA range is undisturbed.</p>
+<p>---</p>
+<h3 class="a-h3">4. Paradigm — BofA, Structurally Stronger</h3>
+<p>The BofA structure is more reinforced at 9:34 than it was at the open:</p>
+<ul class='a-ul'>
+<li>**Ceiling**: Above-spot charm grew from +$16.47M to **+$21.13M** (+28%). 7200 is now carrying +$16.41M charm alone — the single most powerful strike on the board by a wide margin.</li>
+<li>**Floor**: Below-spot charm deepened to -$4.96M from -$2.17M. Still thin versus the ceiling, but rebuilding. Gamma at 7140 (+$9.21M) and 7120 (+$7.77M) provide the real lower containment.</li>
+<li>**Net charm +$16.2M**: Dealers are net sellers as time passes today — mild structural bearish lean from charm alone. This is consistent with SPX gravitating toward 7140 (mid-range below open) rather than testing 7200.</li>
+</ul>
+<p>The early 11-point sell-off is BofA-consistent behavior: the negative gamma at 7170 amplified the opening-minute dip, sending price away from the ceiling toward the internal range. The 7140 gamma pin is now likely to act as the session's mean-reversion target.</p>
+<p>---</p>
+<h3 class="a-h3">5. Risk Factors</h3>
+<p><strong>1. Negative gamma sandwich is the primary intraday risk.</strong> Spot is between -$13.4M at 7170 (above) and -$9.8M at 7150 (below). If a catalyst pushes price through 7150, the next 10 points to 7140 feel violent — but 7140 (+$9.21M) should arrest the move. Do not mistake the amplified move as a paradigm break.</p>
+<p><strong>2. VIX data lag.</strong> NaN VIX reading at 9:34 is a standard open data issue — treat the last confirmed reading (17.59, declining) as still operative until refresh. The vanna stochastic at 100 remains the more reliable signal.</p>
+<p><strong>3. Ceiling is now 40 pts away.</strong> This is positive for the iron condor's upper leg. However, the put side at 7050 is 110 pts away — the condor is asymmetrically positioned. Adjust lower short strike if desired for better credit balance (e.g., move puts to 7100).</p>
+<p><strong>4. 56 minutes to entry window.</strong> Opening range noise continues until 10:30 AM. The negative gamma amplifiers on both sides will make the next hour feel choppy. No entries.</p>
+<p>---</p>
+<h3 class="a-h3">6. Trade Ideas</h3>
+<h4 class="a-h4">BofA Iron Condor | **WAIT for 10:30 AM** | HIGH conviction (if SPX 7140–7190)</h4>
+<p>The upper leg is now even higher conviction — 7200 ceiling has +$16.41M charm and -$22.07M gamma, the strongest setup of the day. Consider adjusting the put leg upward given the 110 pt distance:</p>
+<ul class='a-ul'>
+<li>Sell 7200C / Buy 7225C (upper wing — strongest setup on the board)</li>
+<li>Sell 7100P / Buy 7075P (consider moving from 7050P to 7100P for better credit; 7140 gamma support limits downside risk to this range)</li>
+<li>**Primary conviction upgrade**: the ceiling is more fortified than at any prior read today. The floor asymmetry (40 pts vs. 110 pts) is the only structural concern.</li>
+</ul>
+<p>---</p>
+<h4 class="a-h4">Fade Rally to 7200 | WATCH | MEDIUM-HIGH conviction</h4>
+<ul class='a-ul'>
+<li>**Trigger**: SPX recovers from 7160 and prints 7196–7202, stalls with no 5-min close above 7205</li>
+<li>**Structure**: Buy 7185/7165P put spread, or short 7200C</li>
+<li>**Stop**: Clean 5-min close above 7205</li>
+<li>**Target**: Return to 7150–7160 (mid-range, toward 7140 gamma pin)</li>
+<li>**Why**: +$16.41M charm ceiling + -$22.07M gamma amplifier — the strongest mechanical rejection level on the board. A rally to 7200 from 7160 is 40 pts of positive gamma and charm resistance to overcome before touch.</li>
+</ul>
+<p>---</p>
+<h4 class="a-h4">7200 Breakout — Stand Aside</h4>
+<p>Unchanged. If 7200 breaks on volume with a clean 5-min close above 7205, do not short into the -$22.07M gamma amplifier. Wait for 7205 gamma pin (+$8.95M) to establish the new ceiling. Re-engage short at 7205 only on confirmed stall.</p>
+<p>---</p>
+<h4 class="a-h4">Directional Put — Conditional | WATCH | LOW conviction</h4>
+<p>Directional trades remain low priority in BofA. The early sell-off demonstrates the negative gamma amplification, but the 7140 gamma pin (+$9.21M) is the likely floor. A put spread only becomes relevant if SPX stalls at 7170 resistance (overhead negative gamma) and rolls over again:</p>
+<ul class='a-ul'>
+<li>**Trigger**: SPX recovers toward 7168–7172, stalls at the -$13.42M gamma overhead, confirms 5-min close below 7162</li>
+<li>**Structure**: Buy 7150P / Sell 7120P</li>
+<li>**Stop**: 5-min close above 7172</li>
+<li>**Target**: 7140 (gamma pin magnet)</li>
+<li>**Why**: Negative gamma at 7170 is now the near-term overhead resistance; a failed recovery there with net charm +$16.2M bearishly positioned supports a drift toward 7140. Conviction stays LOW — BofA paradigm means range-bound, not trending.</li>
+</ul>
+<p>---</p>
+<h3 class="a-h3">7. Session Timeline</h3>
+<p>| Time (ET) | Status | Focus |</p>
+<p>|---|---|---|</p>
+<p>| 8:45 AM | Complete | Pre-market brief — BofA confirmed |</p>
+<p>| 9:30 AM | Complete | Open 7171.56 — charm ceiling tripled |</p>
+<p>| <strong>9:34 AM</strong> | <strong>Now</strong> | Open -11 pts to 7160. Negative gamma corridor active. 7140 gravity center. |</p>
+<p>| 10:00–10:15 AM | Pending | Watch for 7140 test or recovery to 7170 overhead resistance |</p>
+<p>| <strong>10:30 AM</strong> | <strong>Entry window</strong> | <strong>Iron condor if SPX rangebound 7135–7190</strong> |</p>
+<p>| 2:00–2:15 PM | Pending | Dealer o'clock |</p>
+<p>| 2:15–2:30 PM | Pending | Charm exhaustion — reassess directional thesis |</p>
+<p>| 3:30–4:00 PM | — | No new positions |</p>
+<p>---</p>
+<h3 class="a-h3">Bottom Line</h3>
+<p>BofA paradigm confirmed and strengthened. SPX's 11-point drop in the first 4 minutes is mechanical behavior — negative gamma at 7170 amplified the dip, and price is now drifting toward the 7140 gamma pin (+$9.21M) that has become the session's gravity center. The 7200 ceiling is now the most fortified it has been all day: +$16.41M charm, -$22.07M gamma amplifier. Upper LIS distance extended to 40 pts — favorable for the iron condor call leg. Entry window in 56 minutes. Primary risk: getting shaken out by the negative gamma amplifiers in the 7150–7170 zone before 10:30 AM. Let the opening range settle.</p>
+<p>*Based on dealer positioning data. ~60–65% of market movement from fundamental, CTA, and passive flows not captured here. Not financial advice.*</p>
+<p>---</p>
+<p>&lt;!-- TRADES_JSON</p>
+<p>{</p>
+<p>"timestamp": "2026-04-30T09:34:00Z",</p>
+<p>"spx": 7160.48,</p>
+<p>"paradigm": "BofA",</p>
+<p>"trades": [</p>
+<p>{</p>
+<p>"id": "bofa_iron_condor",</p>
+<p>"name": "BofA Iron Condor — LIS Boundaries",</p>
+<p>"type": "spread",</p>
+<p>"action": "watch",</p>
+<p>"conviction": "HIGH",</p>
+<p>"is_new": false,</p>
+<p>"trigger": "SPX rangebound 7135–7190 at 10:30 AM ET",</p>
+<p>"structure": "Sell 7200C / Buy 7225C + Sell 7100P / Buy 7075P (put leg adjusted from 7050 to 7100 given 7140 gamma support)",</p>
+<p>"why": "7200 ceiling grew to +$16.41M charm + -$22.07M gamma — most fortified level of the day; 7140 gamma pin (+$9.21M) anchors the lower range, making 7100P a viable short strike 40 pts below pin",</p>
+<p>"stop": "Clean 5-min close above 7205 (call wing) or below 7130 (put wing)",</p>
+<p>"target": "Full premium capture; SPX expected to close between 7130–7195"</p>
+<p>},</p>
+<p>{</p>
+<p>"id": "fade_7200",</p>
+<p>"name": "Fade Rally to 7200",</p>
+<p>"type": "spread",</p>
+<p>"action": "watch",</p>
+<p>"conviction": "MEDIUM-HIGH",</p>
+<p>"is_new": false,</p>
+<p>"trigger": "SPX recovers from 7160 and prints 7196–7202 with no 5-min close above 7205",</p>
+<p>"structure": "Buy 7185/7165P put spread, or short 7200C outright",</p>
+<p>"why": "+$16.41M charm ceiling at 7200 is the strongest single strike on the board; -$22.07M negative gamma amplifier means any stall generates violent rejection",</p>
+<p>"stop": "Clean 5-min close above 7205",</p>
+<p>"target": "7150–7160, toward 7140 gamma pin"</p>
+<p>},</p>
+<p>{</p>
+<p>"id": "breakout_standaside",</p>
+<p>"name": "7200 Breakout — Stand Aside",</p>
+<p>"type": "other",</p>
+<p>"action": "watch",</p>
+<p>"conviction": "HIGH",</p>
+<p>"is_new": false,</p>
+<p>"trigger": "Clean 5-min close above 7205",</p>
+<p>"structure": "No position; wait for 7205 to become new ceiling (+$8.95M gamma, -$7.49M charm floor)",</p>
+<p>"why": "-$22.07M negative gamma at 7200 accelerates moves immediately on breakout; shorting into a negative gamma breakout is the highest-probability losing trade in BofA paradigm",</p>
+<p>"stop": "N/A — risk management rule, not a trade",</p>
+<p>"target": "Re-engage short at 7205 only on confirmed stall with 5-min close below 7200"</p>
+<p>},</p>
+<p>{</p>
+<p>"id": "directional_put_spread",</p>
+<p>"name": "Conditional Put Spread — 7170 Overhead Rejection",</p>
+<p>"type": "long_put",</p>
+<p>"action": "watch",</p>
+<p>"conviction": "LOW",</p>
+<p>"is_new": false,</p>
+<p>"trigger": "SPX recovers toward 7168–7172, stalls at -$13.42M negative gamma overhead, confirms 5-min close below 7162",</p>
+<p>"structure": "Buy 7150P / Sell 7120P",</p>
+<p>"why": "Negative gamma at 7170 (-$13.42M) is the near-term overhead resistance; net charm +$16.2M leans bearish; 7140 gamma pin is the natural target — directional trade only relevant on a failed recovery into overhead resistance",</p>
+<p>"stop": "5-min close above 7172",</p>
+<p>"target": "7140 (gamma pin +$9.21M)"</p>
+<p>}</p>
+<p>]</p>
+<p>}</p>
+<p>--&gt;</p></div>
+        </details><details class="log-entry">
             <summary class="log-summary">
                 <span class="log-time">09:32 ET</span>
                 <span class="log-chevron">▸</span>
